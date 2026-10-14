@@ -37,3 +37,7 @@ FormSubmit emails only arrive when `FORMSUBMIT_ENDPOINT` is set to a real addres
 - Config constants sit at the top of the script: `FORMSUBMIT_ENDPOINT`, `TASK_ID_PREFIX`, `EMAIL_SUBJECT_PREFIX`, and the timeouts.
 - `STATUSES`, `PROJECTS`, `CATEGORIES` and `PRIORITIES` drive the form selects, the filters and validation. The four columns themselves are static markup, so adding a status means editing both `STATUSES` and the HTML.
 - Seed due dates are offsets from today (`daysFromToday`), so the overdue demo cards stay overdue.
+
+## Deployment
+
+`.github/workflows/pages.yml` deploys `index.html` (only) to GitHub Pages on every push to `main`: https://deepaar6.github.io/ProjectMS/. It needs repo Settings → Pages → Source set to "GitHub Actions" once.
